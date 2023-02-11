@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
+import { PaginationComponent } from './layouts/pagination/pagination.component';
+import { SearchbarComponent } from './layouts/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent,
     SidebarComponent,
     ReservationsComponent,
-    ListReservationsComponent
+    ListReservationsComponent,
+    PaginationComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
