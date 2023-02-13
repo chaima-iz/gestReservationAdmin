@@ -8,6 +8,7 @@ import { ReservationsComponent } from './pages/reservations/reservations.compone
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 import { PaginationComponent } from './layouts/pagination/pagination.component';
 import { SearchbarComponent } from './layouts/searchbar/searchbar.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchbarComponent } from './layouts/searchbar/searchbar.component';
     ReservationsComponent,
     ListReservationsComponent,
     PaginationComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

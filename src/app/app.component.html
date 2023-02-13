@@ -1,5 +1,7 @@
 <section class="">
+  <ng-container *ngIf="!isLoginRoute">
  <app-sidebar></app-sidebar>
+</ng-container>
  <div class="p-4 sm:ml-64">
   <div class="p-4 mt-14">
     <router-outlet></router-outlet>
