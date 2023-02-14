@@ -8,6 +8,12 @@ import { ReservationsComponent } from './pages/reservations/reservations.compone
 import { ListReservationsComponent } from './components/reservations/list-reservations/list-reservations.component';
 import { PaginationComponent } from './layouts/pagination/pagination.component';
 import { SearchbarComponent } from './layouts/searchbar/searchbar.component';
+import { ListGamesComponent } from './components/games/list-games/list-games.component';
+import { GamesComponent } from './pages/games/games.component';
+import { EditGameComponent } from './pages/edit-game/edit-game.component';
+import { GameComponent } from './components/games/game/game.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { SearchbarComponent } from './layouts/searchbar/searchbar.component';
     ReservationsComponent,
     ListReservationsComponent,
     PaginationComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    ListGamesComponent,
+    GamesComponent,
+    EditGameComponent,
+    GameComponent,
+    ProfileComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
