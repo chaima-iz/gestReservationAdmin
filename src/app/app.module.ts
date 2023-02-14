@@ -15,7 +15,10 @@ import { GameComponent } from './components/games/game/game.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { AdminComponent } from './pages/admin/admin.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AddGameComponent } from './components/games/add-game/add-game.component';
+import { AddGamePageComponent } from './pages/add-game-page/add-game-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +33,15 @@ import { AdminComponent } from './pages/admin/admin.component';
     GameComponent,
     ProfileComponent,
     ProfilePageComponent,
-    AdminComponent
+    AdminComponent,
+    AddGameComponent,
+    AddGamePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

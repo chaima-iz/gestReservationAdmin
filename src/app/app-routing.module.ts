@@ -5,13 +5,15 @@ import { ReservationsComponent } from './pages/reservations/reservations.compone
 import { GamesComponent } from './pages/games/games.component';
 import { EditGameComponent } from './pages/edit-game/edit-game.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { AddGamePageComponent } from './pages/add-game-page/add-game-page.component';
 
 const routes: Routes = [ 
   { path: 'Reservations', component: ReservationsComponent },
   { path: 'Games', component: GamesComponent },
-  { path: 'EditGame', component: EditGameComponent },
+  { path: 'EditGame/:id', component: EditGameComponent },
   { path: 'Profile', component: ProfilePageComponent },
   { path: 'login', component: AdminComponent },
+  { path: 'addGame', component: AddGamePageComponent },
 ];
 
 @NgModule({

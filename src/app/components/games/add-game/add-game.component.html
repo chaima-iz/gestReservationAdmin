@@ -1,10 +1,10 @@
 <section class=" flex flex-col items-center justify-center h-full  ">
     <div class="shadow-md mt-10 p-6 space-y-12 md:space-y-12 w-[650px] "> 
         <div class="flex justify-center text-2xl font-bold">
-            <h2>Edit Game : {{game.name}}</h2>
+            <h2>Add new Game</h2>
         </div>      
         <div class="space-y-4 md:space-y-6 ">
-            <form class="space-y-4 md:space-y-6 "  (ngSubmit)="update()" >
+            <form class="space-y-4 md:space-y-6 "   (ngSubmit)="addgame()" >
                 <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                     <div class="w-full" id="name">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -15,13 +15,13 @@
                     <div class="w-full" id="name">
                         <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
                         <select id="category" [(ngModel)]="game.category" [ngModelOptions]="{standalone: true}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option *ngIf="game.category" [value]="game.category">{{game.category}}</option>
-                            <option *ngIf="game.category !== 'puzzle'" value="puzzle">Puzzle</option>
-                            <option *ngIf="game.category !== 'strategy'" value="strategy">Strategy</option>
-                            <option *ngIf="game.category !== 'board'" value="board">Board</option>
-                            <option *ngIf="game.category !== 'word'" value="word">Word</option>
-                            <option *ngIf="game.category !== 'card'" value="card">Card</option>
-                            <option *ngIf="game.category !== 'dice'" value="dice">Dice</option>
+                            
+                            <option value="puzzle">Puzzle</option>
+                            <option  value="strategy">Strategy</option>
+                            <option value="board">Board</option>
+                            <option  value="word">Word</option>
+                            <option  value="card">Card</option>
+                            <option  value="dice">Dice</option>
                         </select>
                     </div>
                     
@@ -62,18 +62,17 @@
                     <div class="w-1/2" id="name">
                         <label for="difficulty" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Difficulty</label>
                         <select id="difficulty" [(ngModel)]="game.difficulty" [ngModelOptions]="{standalone: true}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option *ngIf="game.difficulty" [value]="game.difficulty">{{game.difficulty}}</option>
-                            <option *ngIf="game.difficulty !== 'easy'" value="Easy">Easy</option>
-                            <option *ngIf="game.difficulty !== 'medium'" value="Medium">Medium</option>
-                            <option *ngIf="game.difficulty !== 'hard'" value="Hard">Hard</option>
-                            <option *ngIf="game.difficulty !== 'extreme'" value="Extreme">Extreme</option>
+                            <option  value="Easy">Easy</option>
+                            <option  value="Medium">Medium</option>
+                            <option  value="Hard">Hard</option>
+                            <option  value="Extreme">Extreme</option>
                             
                         </select>
                     </div>
                     <div class="flex justify-end w-1/2" >
                         <button type="submit"
                             class="w-1/2 text-gray-800 bg-[#ea803f] hover:bg-[#d76823] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                            Update
+                            Add
                         </button>
                     </div>
                 </div>
