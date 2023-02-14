@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\GameController;
-=======
 use App\Http\Controllers\LoginController;
->>>>>>> 3e0c89d33c71fd2351f30a61bb4268e83ad725f4
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
