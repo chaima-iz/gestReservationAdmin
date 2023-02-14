@@ -14,6 +14,7 @@ import { EditGameComponent } from './pages/edit-game/edit-game.component';
 import { GameComponent } from './components/games/game/game.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     EditGameComponent,
     GameComponent,
     ProfileComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
