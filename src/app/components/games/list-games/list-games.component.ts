@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-games.component.css']
 })
 export class ListGamesComponent {
-  name="games"
+  name="games";
+  p: number = 1;
 }

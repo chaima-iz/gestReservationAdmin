@@ -2,3 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ngx-pagination .current
+{
+    background:#EA803F !important;
+}
+.ngx-pagination li
+{
+    border-radius:50% !important;
+}
