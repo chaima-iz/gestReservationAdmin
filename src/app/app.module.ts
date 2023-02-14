@@ -14,7 +14,8 @@ import { EditGameComponent } from './pages/edit-game/edit-game.component';
 import { GameComponent } from './components/games/game/game.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
-import { AdminComponent } from './pages/admin/admin.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,13 @@ import { AdminComponent } from './pages/admin/admin.component';
     GameComponent,
     ProfileComponent,
     ProfilePageComponent,
-    AdminComponent
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
