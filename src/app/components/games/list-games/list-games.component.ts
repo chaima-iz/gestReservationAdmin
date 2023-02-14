@@ -9,7 +9,7 @@ import { GameService } from 'src/app/services/GameService/game.service';
 })
 export class ListGamesComponent implements OnInit{
   name="games";
-
+  p: number = 1;
   games : any[] = [];
   constructor(private gameService: GameService , private router:Router){ }
 

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-reservations.component.css']
 })
 export class ListReservationsComponent {
-  name="reservations"
+  name="reservations";
+  p:number=1;
 }

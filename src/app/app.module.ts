@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,11 +15,11 @@ import { EditGameComponent } from './pages/edit-game/edit-game.component';
 import { GameComponent } from './components/games/game/game.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
-import { AdminComponent } from './pages/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AddGameComponent } from './components/games/add-game/add-game.component';
 import { AddGamePageComponent } from './pages/add-game-page/add-game-page.component';
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,15 +34,17 @@ import { AddGamePageComponent } from './pages/add-game-page/add-game-page.compon
     GameComponent,
     ProfileComponent,
     ProfilePageComponent,
-    AdminComponent,
     AddGameComponent,
-    AddGamePageComponent
+    AddGamePageComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
