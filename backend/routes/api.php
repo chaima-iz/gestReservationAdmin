@@ -3,6 +3,7 @@
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ Route::get('/games',[GameController::class,'getGames']);
 Route::get('/game/{id}',[GameController::class,'getGame']);
 Route::post('/addGame',[GameController::class,'addGame']);
 Route::put('/editGame/{id}',[GameController::class,'updateGame']);
+
 Route::delete('/deleteGame/{id}',[GameController::class,'deleteGame']);
 Route::post("login",[LoginController::class,'login']);
 Route::post('/logout', function (Request $request) {
@@ -34,3 +36,6 @@ Route::post('/logout', function (Request $request) {
 });
 Route::get('/reservations',[ReservationController::class,'getReservations']);
 Route::put('/reservations/{id}', [ReservationController::class,'UpdateStatus']);
+
+Route::put('/updateProfilePs/{id}',[ProfileController::class,'updateProfilePassword']);
+Route::put('/editProfile/{id}',[ProfileController::class,'updateProfile']);
