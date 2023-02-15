@@ -14,7 +14,7 @@ class LoginController extends Controller
             "password" => ["required"],
         ]);
         $admin = Login::where('email', $request->email)->first();
-       if (! $admin ){
+       if (! $admin || ! Hash::check($request->password, $admin->password)){
             return response([
                 'message'=>['user not found']
             ],404);

@@ -19,7 +19,8 @@ class loginSeeder extends Seeder
             'phone'=>'+212696628710',
             'email'=>'damou.walid@ensam-casa.ma',
             'password'=>Hash::make('walid'),
-            'picture'=>'walid.jpeg'
+            'picture'=>'walid.jpeg',
+            "address"=> "Mhamid7, Imam Malik IMM E N 13, Marrakech"
         ],
         [
             "firstName"=>"Chaima",
@@ -28,7 +29,8 @@ class loginSeeder extends Seeder
             "phone"=>"+212666666666",
             "email"=>"izouarhn.chaima@ensam-casa.ma",
             "password"=>Hash::make('chaima'),
-            "picture"=>"chaima.jpeg"
+            "picture"=>"chaima.jpeg",
+            "address"=> "RUE IMM TAGHZOUT TARAST INZEGAN, Agadir"
         ],
         [
             "firstName"=> "Aicha",
@@ -37,7 +39,8 @@ class loginSeeder extends Seeder
             "phone"=> "+212666666666",
             "email"=> "draoui.aicha@ensam-casa.ma",
             "password"=> Hash::make('aicha'),
-            "picture"=> "aicha.jpeg"
+            "picture"=> "aicha.jpeg",
+            "address"=> "Sidi Othmane, Casablanca"
         ]
     ];
     foreach ($users as $user) {
