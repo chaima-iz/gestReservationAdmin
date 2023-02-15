@@ -9,6 +9,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { AdminGuard } from './guardes/admin.guard';
 
 const routes: Routes = [ 
+  { path: '', component: ReservationsComponent,canActivate: [AdminGuard]  },
+
   { path: 'Reservations', component: ReservationsComponent,canActivate: [AdminGuard] },
   { path: 'Games', component: GamesComponent,canActivate: [AdminGuard] },
   { path: 'EditGame/:id', component: EditGameComponent,canActivate: [AdminGuard] },
