@@ -1,13 +1,17 @@
 <div class=" relative overflow-x-auto shadow-md rounded-md p-4 border">
-
     <app-searchbar [title]="name"></app-searchbar>
+
     <!-- list of reservations  -->
     <table class="w-full text-sm text-left text-gray-500 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3 ">
-                     id
+                    id
                 </th>
+                <th scope="col" class="px-6 py-3">Full Name</th>
+                <th scope="col" class="px-6 py-3">Phone</th>
+                <th scope="col" class="px-6 py-3">Email</th>
+                <th scope="col" class="px-6 py-3">Picture</th>
                 <th scope="col" class="px-6 py-3 ">
                     Date
                 </th>
@@ -29,33 +33,59 @@
                 <th scope="col" class="px-6 py-3 ">
                     Status
                 </th>
-                <th scope="col" class="px-6 py-3 ">
+                <th scope="col" class="px-20 py-3 text-start">
                     Action
                 </th>
             </tr>
         </thead>
         <tbody>
-           
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr *ngFor="let reservation of reservations | paginate: { itemsPerPage: 9, currentPage: p }"
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    AirTag
+                    {{reservation.id}}
                 </th>
+                <td class="px-6 py-4">Walid Damou</td>
+                <td class="px-6 py-4">+212696628710</td>
+                <td class="px-6 py-4">damou.walid@ensam-casa.ma</td>
+                <td class="px-6 py-4"><img src="/assets/imgs/walid.jpeg" alt=""></td>
                 <td class="px-6 py-4">
-                    Silver
+                    {{reservation.reservation_date}}
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    {{reservation.start_time}}
                 </td>
                 <td class="px-6 py-4">
-                    $29
+                    {{reservation.end_time}}
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    {{reservation.game}}
+                </td>
+                <td class="px-6 py-4">
+                    {{reservation.payement}}
+                </td>
+                <td class="px-6 py-4">
+                    {{reservation.instructions}}
+                </td>
+                <td class="px-6 py-4">
+                    {{reservation.status}}
+                </td>
+                <td class="px-6 py-4">
+                    <!-- <label for="underline_select" class="sr-only">Change status</label> -->
+                    <select #statusSelect (change)="onStatusChange(reservation.id, statusSelect.value)"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                        <option disabled selected>Change status</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Cancelled">Cancelled</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Waitlisted">Waitlisted</option>
+                    </select>
+
                 </td>
             </tr>
         </tbody>
     </table>
-    <div class="flex justify-center md:justify-end mt-4">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
-    </div>
+
+</div>
+<div class="flex justify-center md:justify-end mt-4">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

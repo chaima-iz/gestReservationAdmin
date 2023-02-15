@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::post('/logout', function (Request $request) {
     // or
      $request->user()->currentAccessToken()->delete();
 });
+Route::get('/reservations',[ReservationController::class,'getReservations']);
+Route::put('/reservations/{id}', [ReservationController::class,'UpdateStatus']);
