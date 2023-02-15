@@ -26,3 +26,8 @@ Route::post('/addGame',[GameController::class,'addGame']);
 Route::put('/editGame/{id}',[GameController::class,'updateGame']);
 Route::delete('/deleteGame/{id}',[GameController::class,'deleteGame']);
 Route::post("login",[LoginController::class,'login']);
+Route::post('/logout', function (Request $request) {
+    //$request->session()->invalidate();
+    // or
+     $request->user()->currentAccessToken()->delete();
+});
