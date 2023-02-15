@@ -20,7 +20,7 @@ export class LoginComponent {
           localStorage.setItem("user" , JSON.stringify(res.user))
           localStorage.setItem("logged_in" , "true");
           console.log("it works");
-          localStorage.setItem("user",res.user)
+          // localStorage.setItem("user",res.user)
           this.router.navigate(['/'])
         }
       },
