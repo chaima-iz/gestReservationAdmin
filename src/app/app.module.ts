@@ -44,7 +44,7 @@ import { LoginComponent } from './pages/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

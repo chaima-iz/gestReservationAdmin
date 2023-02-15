@@ -17,12 +17,15 @@ export class LoginComponent {
     .subscribe(
       res=>{
         if(res.user){
+          localStorage.setItem("user" , JSON.stringify(res.user))
+          localStorage.setItem("logged_in" , "true");
           console.log("it works");
           this.router.navigate(['/'])
         }
       },
       error=>{
         console.log("it doesn't work");
+        localStorage.setItem("error" , "true");
       }
     );
   }
