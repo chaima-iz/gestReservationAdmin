@@ -18,6 +18,7 @@ export class LoginComponent {
       res=>{
         if(res.user){
           console.log("it works");
+          localStorage.setItem("user",res.user)
           this.router.navigate(['/'])
         }
       },
