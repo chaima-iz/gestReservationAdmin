@@ -7,7 +7,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
 import { AddGamePageComponent } from './pages/add-game-page/add-game-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminGuard } from './guardes/admin.guard';
-
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 const routes: Routes = [ 
   { path: '', component: ReservationsComponent,canActivate: [AdminGuard]  },
 
@@ -17,6 +17,8 @@ const routes: Routes = [
   { path: 'Profile', component: ProfilePageComponent,canActivate: [AdminGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'addGame', component: AddGamePageComponent,canActivate: [AdminGuard] },
+  { path: 'dashboard', component:DashboardPageComponent ,canActivate: [AdminGuard] },
+
 ];
 
 @NgModule({

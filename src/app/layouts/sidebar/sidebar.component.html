@@ -13,8 +13,8 @@
             </path>
           </svg>
         </button>
-        <a href="#" class="flex ml-2 md:mr-24">
-          <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+        <a [routerLink]="['/']" class="ml-4 flex items-center w-[120px] md:w-[160px] ">
+          <img src="/assets/imgs/Logo_DD_dark.png" alt="" class="w-full">
         </a>
       </div>
       <div class="flex items-center">
@@ -39,7 +39,7 @@
             </div>
             <ul class="py-1" role="none">
               <li>
-                <a [routerLink]="['/']" routerLinkActive="router-link-active"
+                <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                   role="menuitem">Dashboard</a>
               </li>
@@ -68,7 +68,7 @@
   <div class="h-full px-3 pb-4 overflow-y-auto bg-[#fcf8f5] ">
     <ul class="space-y-2">
       <li>
-        <a href="#"
+        <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
           class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
           <svg aria-hidden="true"
             class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"

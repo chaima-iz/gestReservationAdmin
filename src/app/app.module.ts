@@ -20,6 +20,8 @@ import { FormsModule } from '@angular/forms';
 import { AddGameComponent } from './components/games/add-game/add-game.component';
 import { AddGamePageComponent } from './pages/add-game-page/add-game-page.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import { LoginComponent } from './pages/login/login.component';
     AddGameComponent,
     AddGamePageComponent,
     LoginComponent,
-
+    DashboardComponent,
+    DashboardPageComponent,
   ],
   imports: [
     BrowserModule,
