@@ -1,22 +1,22 @@
 <section class="flex flex-col gap-8">
     <!-- cards -->
     <div class="flex items-center justify-between gap-2">
-        <div
+        <div 
             class="w-1/4 border-b-2 border-b-[#EA803F] block py-2 px-4 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100">
             <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-800 ">Total Games</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">20</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">{{data?.gamesCount}}</h5>
             <p class="font-normal text-gray-500 ">Game</p>
         </div>
         <div
             class="w-1/4 border-b-2 border-b-[#EA803F] block py-2 px-4 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100">
             <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-800 ">Total Admins</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">20</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">{{data?.adminsCount}}</h5>
             <p class="font-normal text-gray-500 ">Admin</p>
         </div>
         <div
             class="w-1/4 border-b-2 border-b-[#EA803F] block py-2 px-4 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100">
             <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-800 ">Total Reservations</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">20</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#EA803F]">{{data?.reservationsCount}}</h5>
             <p class="font-normal text-gray-500 ">Reservation</p>
         </div>
         <div
@@ -65,17 +65,29 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr *ngFor="let game of data?.games " class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Apple MacBook Pro 17"
+                    {{game.name}}
                 </th>
-                <td class="px-6 py-4">
-                    Silver
+                <td scope="col" class="px-6 py-3">
+                    {{game.minPlayers}}
                 </td>
-                <td class="px-6 py-4">
-                    Laptop
+                <td scope="col" class="px-6 py-3">
+                    {{game.maxPlayers}}
+                </td>
+                <td scope="col" class="px-6 py-3">
+                    {{game.desc}}
+                </td>
+                <td scope="col" class="px-6 py-3">
+                    {{game.rules}}
                 </td>
                
+                <td scope="col" class="px-6 py-3">
+                    {{game.difficulty}}
+                </td>
+                <td scope="col" class="px-6 py-3">
+                    {{game.category}}
+                </td>
                
             </tr>
            

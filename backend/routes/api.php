@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReservationController;
@@ -39,3 +40,5 @@ Route::put('/reservations/{id}', [ReservationController::class,'UpdateStatus']);
 
 Route::put('/updateProfilePs/{id}',[ProfileController::class,'updateProfilePassword']);
 Route::put('/editProfile/{id}',[ProfileController::class,'updateProfile']);
+
+Route::get('/dashboard',[DashboardController::class,'getData']);

@@ -9,7 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AdminGuard } from './guardes/admin.guard';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 const routes: Routes = [ 
-  { path: '', component: ReservationsComponent,canActivate: [AdminGuard]  },
+  { path: '', component: DashboardPageComponent,canActivate: [AdminGuard]  },
 
   { path: 'Reservations', component: ReservationsComponent,canActivate: [AdminGuard] },
   { path: 'Games', component: GamesComponent,canActivate: [AdminGuard] },

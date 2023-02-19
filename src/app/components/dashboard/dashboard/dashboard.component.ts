@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart,registerables } from 'chart.js';
+import { DashboardService } from 'src/app/services/DashBoardService/dashboard.service';
 Chart.register(...registerables);
 
 @Component({
@@ -8,7 +9,23 @@ Chart.register(...registerables);
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit{
+  data: {
+    gamesCount: number;
+    adminsCount: number;
+    reservationsCount: number;
+    games: any;
+  } | undefined;
+
+  constructor(private dashboardService:DashboardService){}
+
   ngOnInit(){
+
+    this.dashboardService.getData().subscribe(
+      res=>{
+        this.data = res.data;
+        console.log(this.data)
+      }
+    );
 
     new Chart("myChart", {
       type: 'bar',
@@ -31,6 +48,8 @@ export class DashboardComponent implements OnInit{
   
       }
   });
+
   }
+
 
 }
