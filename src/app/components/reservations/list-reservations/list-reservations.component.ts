@@ -7,10 +7,9 @@ import { ReservationService } from 'src/app/services/ReservationsService/reserva
   styleUrls: ['./list-reservations.component.css'],
 })
 export class ListReservationsComponent {
-  name = 'reservations';
   p: number = 1;
-  selectedStatus: any;
   @Input() reservations!: any[];
+
 
 
   constructor(private reservationService: ReservationService) {}
