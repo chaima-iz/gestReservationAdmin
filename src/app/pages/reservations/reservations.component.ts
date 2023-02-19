@@ -8,7 +8,7 @@ import { ReservationService } from 'src/app/services/ReservationsService/reserva
 })
 export class ReservationsComponent {
   reservations:any;
-  reservationStatus: { [index: number]: { [id: number]: string } } = {};
+  name = 'reservations';
 
   constructor(private reservationService: ReservationService) { }
 
@@ -22,5 +22,6 @@ export class ReservationsComponent {
     console.log(this.reservations);
     });
   }
+ 
 
 }

@@ -5,8 +5,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.css']
 })
-export class SearchbarComponent {
+export class SearchbarComponent{
   @Input() title: string | undefined;
+  searchText:any;
+  @Output() search = new EventEmitter<any>();
+
+  onSearch() {
+    this.search.emit(this.searchText);
+  }
 
   
 }
