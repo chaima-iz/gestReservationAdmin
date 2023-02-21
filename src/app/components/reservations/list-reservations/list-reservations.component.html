@@ -44,10 +44,10 @@
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {{reservation.id}}
                     </th>
-                    <td class="px-6 py-4">Walid Damou</td>
-                    <td class="px-6 py-4">+212696628710</td>
-                    <td class="px-6 py-4">damou.walid@ensam-casa.ma</td>
-                    <td class="px-6 py-4"><img src="/assets/imgs/walid.jpeg" alt=""></td>
+                    <td class="px-6 py-4"> {{reservation.firstName}} {{reservation.lastName}}</td>
+                    <td class="px-6 py-4"> {{reservation.phone}}</td>
+                    <td class="px-6 py-4"> {{reservation.email}}</td>
+                    <td class="px-6 py-4"><img src="/assets/imgs/{{reservation.picture}}" alt="client img"></td>
                     <td class="px-6 py-4">
                         {{reservation.reservation_date}}
                     </td>
@@ -58,7 +58,7 @@
                         {{reservation.end_time}}
                     </td>
                     <td class="px-6 py-4">
-                        {{reservation.game}}
+                        {{reservation.name}}
                     </td>
                     <td class="px-6 py-4">
                         {{reservation.payement}}

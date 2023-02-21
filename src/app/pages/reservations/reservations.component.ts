@@ -7,7 +7,7 @@ import { ReservationService } from 'src/app/services/ReservationsService/reserva
   styleUrls: ['./reservations.component.css']
 })
 export class ReservationsComponent {
-  reservations:any;
+  reservations: any;
   name = 'reservations';
 
   constructor(private reservationService: ReservationService) { }
@@ -18,10 +18,9 @@ export class ReservationsComponent {
   getReservations() {
     this.reservationService.listGames().subscribe((reservations) => {
       this.reservations = reservations.data;
-      
-    console.log(this.reservations);
+       console.log(this.reservations);
     });
   }
- 
+
 
 }

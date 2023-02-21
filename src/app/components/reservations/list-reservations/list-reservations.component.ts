@@ -16,7 +16,7 @@ export class ListReservationsComponent {
 
   onStatusChange(reservationId: number, newStatus: string) {
     this.reservationService.onStatusChange(reservationId, newStatus);
-    console.log(reservationId);
-    console.log(newStatus);
+    // console.log(reservationId);
+    // console.log(newStatus);
   }
 }

@@ -23,9 +23,11 @@ export class ReservationService {
       window.location.reload();
 
     });
+
+    
   
 
-    console.log(reservationId);
-    console.log(newStatus);
+    // console.log(reservationId);
+    // console.log(newStatus);
   }
 }
